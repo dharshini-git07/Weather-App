@@ -49,12 +49,11 @@ export const getWindDirection = (degrees) => {
  */
 export const formatUnixTime = (timestamp, timezoneOffset = 0) => {
   if (!timestamp) return '--:--';
-  // Create Date object adjusting for target timezone offset
   const date = new Date((timestamp + timezoneOffset) * 1000);
-  return date.toLocaleTimeString([], {
+  return date.toLocaleTimeString('en-GB', {
     hour: '2-digit',
     minute: '2-digit',
-    hour12: true,
+    hour12: false,
     timeZone: 'UTC'
   });
 };

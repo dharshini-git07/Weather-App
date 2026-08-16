@@ -12,10 +12,11 @@ const Header = ({ weather }) => {
     return () => clearInterval(timer);
   }, []);
 
-  const formattedTime = currentTime.toLocaleTimeString([], {
+  const formattedTime = currentTime.toLocaleTimeString('en-GB', {
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit'
+    second: '2-digit',
+    hour12: false
   });
 
   const formattedDate = currentTime.toLocaleDateString([], {
