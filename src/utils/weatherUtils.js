@@ -50,10 +50,10 @@ export const getWindDirection = (degrees) => {
 export const formatUnixTime = (timestamp, timezoneOffset = 0) => {
   if (!timestamp) return '--:--';
   const date = new Date((timestamp + timezoneOffset) * 1000);
-  return date.toLocaleTimeString('en-GB', {
+  return date.toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
-    hour12: false,
+    hour12: true,
     timeZone: 'UTC'
   });
 };
