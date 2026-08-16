@@ -1,10 +1,6 @@
 import React from 'react';
 import { SunMedium, Search, Compass, CloudRain } from 'lucide-react';
 
-/**
- * InitialState Component
- * Centered hero graphic displayed before the user searches for any city.
- */
 const InitialState = ({ onQuickSearch }) => {
   return (
     <div className="initial-state-container fade-in">

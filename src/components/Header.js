@@ -2,10 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { CloudSun, Clock, MapPin } from 'lucide-react';
 import { getWeatherCategory } from '../utils/weatherUtils';
 
-/**
- * Header Component
- * Displays application branding, live clock, and active weather condition badge.
- */
 const Header = ({ weather }) => {
   const [currentTime, setCurrentTime] = useState(new Date());
 

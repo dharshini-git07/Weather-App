@@ -11,10 +11,6 @@ import InitialState from './components/InitialState';
 import { fetchWeatherData } from './services/weatherService';
 import './App.css';
 
-/**
- * Main Application Component
- * Coordinates application state, API calls, unit toggling, and UI rendering.
- */
 function App() {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
@@ -22,13 +18,9 @@ function App() {
   const [error, setError] = useState('');
   const [unit, setUnit] = useState('C');
 
-  /**
-   * Triggers weather API search for a given city string
-   */
   const handleSearch = async (targetCity) => {
     const searchTarget = targetCity !== undefined ? targetCity : city;
 
-    // Validate empty input
     if (!searchTarget || !searchTarget.trim()) {
       setError('Please enter a city name.');
       setWeather(null);
@@ -51,9 +43,6 @@ function App() {
     }
   };
 
-  /**
-   * Toggles unit between Celsius ('C') and Fahrenheit ('F')
-   */
   const handleToggleUnit = (selectedUnit) => {
     setUnit(selectedUnit);
   };

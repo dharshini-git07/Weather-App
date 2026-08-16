@@ -1,10 +1,6 @@
 import React from 'react';
 import { getWeatherCategory } from '../utils/weatherUtils';
 
-/**
- * DynamicBackground Component
- * Renders atmospheric background gradients and animated particle effects based on weather category.
- */
 const DynamicBackground = ({ condition }) => {
   const category = getWeatherCategory(condition);
   const themeClass = `theme-${category.toLowerCase()}`;

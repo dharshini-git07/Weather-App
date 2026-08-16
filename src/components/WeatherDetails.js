@@ -2,10 +2,6 @@ import React from 'react';
 import { Droplets, Wind, Gauge, Eye, Sunrise, Sunset, Compass } from 'lucide-react';
 import { getWindDirection, formatUnixTime } from '../utils/weatherUtils';
 
-/**
- * WeatherDetails Component
- * Displays grid of 6 detailed weather metrics: Humidity, Wind, Pressure, Visibility, Sunrise, Sunset.
- */
 const WeatherDetails = ({ weather }) => {
   if (!weather) return null;
 

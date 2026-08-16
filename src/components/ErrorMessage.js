@@ -1,14 +1,9 @@
 import React from 'react';
 import { AlertCircle, KeyRound, WifiOff, MapPinOff, RefreshCw } from 'lucide-react';
 
-/**
- * ErrorMessage Component
- * Displays friendly user feedback alerts based on error type.
- */
 const ErrorMessage = ({ error, onRetry }) => {
   if (!error) return null;
 
-  // Determine appropriate icon and title based on message content
   let IconComponent = AlertCircle;
   let title = 'Search Issue';
 

@@ -2,9 +2,6 @@ import React from 'react';
 import { Calendar, Sun, Cloud, CloudRain, CloudDrizzle, CloudLightning, Snowflake, CloudFog } from 'lucide-react';
 import { formatTemperature, formatDayName, getWeatherCategory, capitalizeWords } from '../utils/weatherUtils';
 
-/**
- * Returns icon element for forecast item
- */
 const getSmallWeatherIcon = (category) => {
   switch (category) {
     case 'Clear':
@@ -26,10 +23,6 @@ const getSmallWeatherIcon = (category) => {
   }
 };
 
-/**
- * ForecastCard Component
- * Multi-day forecast projection card with mobile horizontal scroll.
- */
 const ForecastCard = ({ forecast, unit }) => {
   if (!forecast || forecast.length === 0) return null;
 

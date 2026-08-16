@@ -3,10 +3,6 @@ import { Search } from 'lucide-react';
 
 const POPULAR_CITIES = ['Chennai', 'Mumbai', 'London', 'New York', 'Tokyo', 'Paris', 'Sydney'];
 
-/**
- * SearchBar Component
- * Includes city text input, search button, popular city tags, and unit toggle.
- */
 const SearchBar = ({ onSearch, loading, unit, onToggleUnit, currentCity }) => {
   const [inputCity, setInputCity] = useState('');
 

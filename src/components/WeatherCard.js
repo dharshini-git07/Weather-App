@@ -13,9 +13,6 @@ import {
 } from 'lucide-react';
 import { formatTemperature, capitalizeWords, getWeatherCategory, formatUnixTime } from '../utils/weatherUtils';
 
-/**
- * Returns appropriate Lucide icon component based on weather category
- */
 const getWeatherIconComponent = (category) => {
   switch (category) {
     case 'Clear':
@@ -37,10 +34,6 @@ const getWeatherIconComponent = (category) => {
   }
 };
 
-/**
- * WeatherCard Component
- * Prominent weather card displaying city, country, temperature, feels like, min/max, and condition.
- */
 const WeatherCard = ({ weather, unit }) => {
   if (!weather) return null;
 
